@@ -2,7 +2,7 @@ const {gql} = require("apollo-server");
 
 const adminDoctorTypeDef = gql`
     type AdminDoctor {
-        id: String!
+        id: Int!
         name: String!
         last_name: String!
         phone: String!
