@@ -14,7 +14,7 @@ const adminDoctorTypeDef = gql`
     }
 
     type Query {
-        doctorByName(name: String!): AdminDoctor
+        doctorById(id: Int!): AdminDoctor
     }
 `;
 
