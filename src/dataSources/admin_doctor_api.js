@@ -7,8 +7,16 @@ class AdminDoctorAPI extends RESTDataSource{
         this.baseURL = serverConfig.admin_doctor_url;
     }
 
+    async doctorCreate(doctorInformation){
+        return await this.post(`/api/doctors`, doctorInformation);
+    }
+
     async doctorById(id){
         return await this.get(`/api/doctors/${id}`);
+    }
+
+    async doctors(id){
+        return await this.get(`/api/doctors`);
     }
 }
 
