@@ -1,10 +1,10 @@
 const { RESTDataSource } = require("apollo-datasource-rest");
 const serverConfig = require("../server");
 
-class AdminDoctor extends RESTDataSource{
+class AdminDoctorAPI extends RESTDataSource{
     constructor(){
         super();
-        this.baseURL = serverConfig.admin_doctor_api;
+        this.baseURL = serverConfig.admin_doctor_url;
     }
 
     async doctorById(id){
@@ -12,4 +12,4 @@ class AdminDoctor extends RESTDataSource{
     }
 }
 
-module.exports = AdminDoctor;
+module.exports = AdminDoctorAPI;

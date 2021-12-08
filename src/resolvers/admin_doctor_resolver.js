@@ -1,7 +1,11 @@
 const adminDoctorResolver = {
-    doctorById: async (_, { id }, { dataSource }) => {
-        return await dataSource.doctorById(id);
-    }
+    Query: {
+        doctorById: async(_, { id }, { dataSources }) => {
+            console.log(dataSources);
+            return await dataSources.adminDoctorAPI.doctorById(id);
+        }
+    },
+    // Mutation: {}
 }
 
 module.exports = adminDoctorResolver;

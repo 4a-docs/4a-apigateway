@@ -1,5 +1,5 @@
-const adminDoctorTypeDef = require("./admin_doctor_typedef");
+const adminDoctorTypeDefs = require("./admin_doctor_typedef");
 
-const schemaArrays = [adminDoctorTypeDef];
+const schemaArrays = [adminDoctorTypeDefs];
 
 module.exports = schemaArrays;

@@ -1,3 +1,3 @@
 module.exports = {
-    admin_doctor_api : "https://doctor-mser.herokuapp.com/",
+    admin_doctor_url : "https://doctor-mser.herokuapp.com",
 }

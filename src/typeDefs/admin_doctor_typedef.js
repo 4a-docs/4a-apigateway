@@ -1,8 +1,8 @@
-const {gql} = require("apollo-server");
+const { gql } = require("apollo-server");
 
-const adminDoctorTypeDef = gql`
+const adminDoctorTypeDefs = gql`
     type AdminDoctor {
-        id: Int!
+        id: String
         name: String!
         last_name: String!
         phone: String!
@@ -10,12 +10,13 @@ const adminDoctorTypeDef = gql`
         identification: String!
         birthdate: String!
         email: String!
-        password: String!
     }
 
     type Query {
-        doctorById(id: Int!): AdminDoctor
+        doctorById(id: String): AdminDoctor
     }
+
+    # type Mutation {}
 `;
 
-module.exports = adminDoctorTypeDef; 
+module.exports = adminDoctorTypeDefs;
