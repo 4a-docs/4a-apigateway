@@ -34,6 +34,7 @@ const authTypeDefs = gql `
 
     type Token {
         token: String!
+        id: Int!
     }
 
     extend type Query {
