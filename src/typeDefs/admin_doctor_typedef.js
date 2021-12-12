@@ -2,7 +2,7 @@ const { gql } = require("apollo-server");
 
 const adminDoctorTypeDefs = gql`
     type AdminDoctor {
-        id: String
+        id: Int
         name: String!
         last_name: String!
         phone: String!
@@ -14,7 +14,7 @@ const adminDoctorTypeDefs = gql`
     }
 
     input DoctorCreateInput {
-        id: String
+        id: Int
         name: String!
         last_name: String!
         phone: String!
@@ -26,8 +26,8 @@ const adminDoctorTypeDefs = gql`
     }
 
     type Query {
-        doctorById(id: String!): AdminDoctor
-        doctors(id: String): [AdminDoctor]
+        doctorById(id: Int!): AdminDoctor
+        doctors(id: Int): [AdminDoctor]
     }
 
     type Mutation {

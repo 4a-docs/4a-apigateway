@@ -8,7 +8,7 @@ class AdminDoctorAPI extends RESTDataSource{
     }
 
     async doctorCreate(doctorInformation){
-        return await this.post(`/api/doctors`, doctorInformation);
+        return await this.post('/api/doctors',doctorInformation);
     }
 
     async doctorById(id){
@@ -16,7 +16,7 @@ class AdminDoctorAPI extends RESTDataSource{
     }
 
     async doctors(id){
-        return await this.get(`/api/doctors`);
+        return await this.get('/api/doctors');
     }
 }
 
